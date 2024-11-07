@@ -1,12 +1,16 @@
 import axios from "axios";
 
+console.log("Base URL:", import.meta.env.VITE_BASE_URL);
+
 const API_KEY=import.meta.env.VITE_STRAPI_API_KEY;
 const axiosClient=axios.create({
+    
     baseURL:import.meta.env.VITE_BASE_URL+"/api/",
     headers:{
         'Content-Type':'application/json',
         'Authorization':`Bearer ${API_KEY}`
     }
+    
 
 })
 
